@@ -12,7 +12,6 @@ It allows IT admins to:
 
 This simplifies repetitive tasks and makes user management **scalable and error-free**.
 
----
 ## Prerequisites
 
 ### 1. Install Microsoft Graph Modules
@@ -30,8 +29,6 @@ Get-Module -ListAvailable Microsoft.Graph*
 
 ### ✅ 3. Connect to M365
 
-## Connect to Microsoft 365
-
 Connect-MgGraph -Scopes "User.ReadWrite.All","Directory.ReadWrite.All"
 
 ### ✅ 4. Run Script
@@ -41,7 +38,6 @@ cd C:\Users\shash\Powershell-onboard
 
 ### ✅ 5. Git Commands
 
-```bash
 git init
 git add .
 git commit -m "Initial commit"
