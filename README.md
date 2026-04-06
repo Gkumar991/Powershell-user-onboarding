@@ -41,9 +41,6 @@ cd C:\Users\shash\Powershell-onboard
 
 ### ✅ 5. Git Commands
 
-
-## Git Commands
-
 ```bash
 git init
 git add .
