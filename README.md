@@ -13,7 +13,6 @@ It allows IT admins to:
 This simplifies repetitive tasks and makes user management **scalable and error-free**.
 
 ---
-
 ## Prerequisites
 
 ### 1. Install Microsoft Graph Modules
@@ -25,42 +24,22 @@ Import-Module Microsoft.Graph.Users
 Import-Module Microsoft.Graph.Authentication
 
 ---
-
 ### ✅ 2. Check Modules
 
-
-## Verify Installed Modules
-
-```powershell
 Get-Module -ListAvailable Microsoft.Graph*
-
-
----
 
 ### ✅ 3. Connect to M365
 
-
 ## Connect to Microsoft 365
 
-```powershell
 Connect-MgGraph -Scopes "User.ReadWrite.All","Directory.ReadWrite.All"
-
-
----
 
 ### ✅ 4. Run Script
 
-
-## Run the Script
-
-```powershell
 cd C:\Users\shash\Powershell-onboard
 .\OnboardUsersSimple.ps1
 
-
----
-
-### ✅ 6. Git Commands
+### ✅ 5. Git Commands
 
 
 ## Git Commands
