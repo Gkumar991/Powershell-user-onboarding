@@ -46,7 +46,7 @@ foreach ($user in $users) {
     try {
         $sku = Get-MgSubscribedSku | Where-Object {$_.SkuPartNumber -eq $user.License}
         if ($sku) {
-            Update-MgUserLicense -UserId $user.UserName -AddLicenses @{SkuId = $sku.SkuId} -RemoveLicenses @()
+            Set-MgUserLicense -UserId $user.UserName -AddLicenses @{SkuId = $sku.SkuId} -RemoveLicenses @()
             Write-Host "License assigned to $($user.UserName)" -ForegroundColor Yellow
         }
         else {
