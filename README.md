@@ -1,28 +1,52 @@
-# M365 User Onboarding Automation
+M365 User Onboarding Automation (PowerShell)
+Overview
+This project automates Microsoft 365 user onboarding using PowerShell and Microsoft Graph.
 
-## About the Project
-This project automates user onboarding in Microsoft 365 using PowerShell. 
-I started with a trial M365 Business Standard subscription and learned to:
-- Install and import Microsoft Graph modules
-- Connect PowerShell to M365
-- Bulk onboard users from a CSV file
-- Assign licenses and groups automatically
+It allows IT admins to:
 
-This project was created to practice automation, version control, and real-world IT admin tasks.
+Create new users
+Update existing users
+Assign licenses
+Bulk process users using a CSV file
 
-## Workflow Story
-1. Created GitHub repository for project
-2. Installed PowerShell modules (Microsoft.Graph)
-3. Generated SSH key and connected GitHub
-4. Created `users.csv` for bulk onboarding
-5. Wrote PowerShell script `OnboardUsersSimple.ps1`
-6. Connected to M365 and ran script
-7. Verified users and licenses in Admin Centre
-8. Pushed code and CSV to GitHub for version tracking
+This simplifies repetitive tasks and makes user management scalable and error-free.
+Prerequisites
 
-## How to Run
-1. Prepare `users.csv` with columns: FirstName, LastName, Email, Department
-2. Open PowerShell
-3. Connect to M365:
-```powershell
-Connect-MgGraph -Scopes "User.ReadWrite.All","Directory.ReadWrite.All","Group.ReadWrite.All"
+1. Install Microsoft Graph Modules
+   
+Install-Module Microsoft.Graph -Scope CurrentUser
+Import-Module Microsoft.Graph
+Import-Module Microsoft.Graph.Users
+Import-Module Microsoft.Graph.Authentication
+
+Check available modules with:
+Get-Module -ListAvailable Microsoft.Graph*
+
+Connect to Microsoft 365 
+
+Authenticate your session with Microsoft Graph:
+Connect-MgGraph -Scopes "User.ReadWrite.All","Directory.ReadWrite.All"
+project structure 
+Powershell-onboard/
+│
+├── OnboardUsersSimple.ps1    # Main onboarding script
+├── users.csv                 # User list CSV
+└── README.md
+
+Run the Script
+cd C:\Users\shash\Powershell-onboard
+.\OnboardUsersSimple.ps1
+
+The script will: 
+
+Read the users.csv file.
+Create new users or update existing users.
+Assign licenses using Set-MgUserLicense.
+
+git init
+git add.
+git commit -m "Initial commit."
+git remote add origin <repo-url>
+git push -u origin main
+
+
